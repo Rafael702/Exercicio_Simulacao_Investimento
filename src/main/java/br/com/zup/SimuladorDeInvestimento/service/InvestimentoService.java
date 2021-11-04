@@ -10,10 +10,12 @@ import java.util.List;
 public class InvestimentoService {
     List<InvestimentoDTO> investimentos = new ArrayList<>();
 
-    public void salvarInvestimentos(InvestimentoDTO investimentoDTO){
+    public void salvarInvestimentos(InvestimentoDTO investimentoDTO) {
         investimentos.add(investimentoDTO);
     }
 
-
+    public List<InvestimentoDTO> exibirInvestimentos() {
+        return investimentos;
+    }
 
 }
