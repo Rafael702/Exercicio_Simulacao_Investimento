@@ -15,8 +15,12 @@ public class InvestimentoController {
     private InvestimentoService investimentoService;
 
     @PutMapping
-    public void cadastrarInvestimento(@RequestBody InvestimentoDTO investimentoDTO){
+    public void cadastrarInvestimento(@RequestBody InvestimentoDTO investimentoDTO) {
         investimentoService.salvarInvestimentos(investimentoDTO);
     }
 
+    @GetMapping
+    public List<InvestimentoDTO> exibirInvestimentos() {
+        return investimentoService.exibirInvestimentos();
+    }
 }
